@@ -3,7 +3,7 @@
 function BinarioADecimal(num) {
   // tu codigo aca
   num = String(num)
-  binarioR = num.split('').reverse().join('');
+  let binarioR = num.split('').reverse().join('');
   let Decimal = 0;
   for (let i = 0; i < num.length ; i++){
       Decimal = Decimal + binarioR.charAt(i) * Math.pow(2 , i);
