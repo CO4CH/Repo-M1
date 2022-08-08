@@ -39,7 +39,7 @@ console.log(x); // 1
 
 ```javascript
 console.log(bar); // undefined
-console.log(baz); // ReferenceError
+console.log(baz); // ReferenceError: baz is not defined
 foo();
 function foo() { console.log('Hola!'); }
 var bar = 1;
