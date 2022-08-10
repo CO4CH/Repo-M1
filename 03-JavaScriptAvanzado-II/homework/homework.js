@@ -49,13 +49,10 @@ function cacheFunction(cb) {
   */
  var  Cache = {} ;
  return function(arg){
-  if(Cache.hasOwnProperty(arg)){
-    return Cache[arg]
-  } else {
-    let valor = cb(arg)
-    Object.defineProperty(Cache, arg, {value: valor});
-    return valor;
+  if(!Cache.hasOwnProperty(arg)){
+    Object.defineProperty(Cache, arg, {value: cb(arg)});
   }
+  return Cache[arg];
  }
 }
 
